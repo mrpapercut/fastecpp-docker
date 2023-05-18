@@ -16,5 +16,6 @@ if n=$(./ecpp-verify -i ./certs/$CERT_FILENAME.primo | grep -irn 'certificate is
     echo "$1 is prime (certificate: $CERT_FILENAME)" >> foundprimes.txt
     echo "$1 is prime!"
 else
+    echo "$1 is not prime :(" >> notfoundprimes.txt
     echo "$1 is not prime :("
 fi
