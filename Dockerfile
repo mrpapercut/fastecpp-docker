@@ -4,6 +4,7 @@ RUN apt-get update && apt-get install -y \
     gcc g++ make \
     wget \
     libgmp-dev libmpfr-dev libpari-dev zlib1g-dev \
+    openmpi-common openmpi-bin libopenmpi-dev \
     git python3 pip
 
 WORKDIR /fastecpp
@@ -18,7 +19,7 @@ RUN cd /fastecpp/mpfrcx-0.6.3 && ./configure && make && make install
 
 # Install CM
 RUN wget https://www.multiprecision.org/downloads/cm-0.4.2.tar.gz && tar -xzf ./cm-0.4.2.tar.gz
-RUN cd /fastecpp/cm-0.4.2 && ./configure && make && make install
+RUN cd /fastecpp/cm-0.4.2 && ./configure --enable-mpi && make && make install
 
 # Cleanup
 RUN cd /fastecpp && rm -rf ./*
