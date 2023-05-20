@@ -1,4 +1,3 @@
-Sum             Length  Time in seconds     Time in seconds (MPI)
 10^100-797
 10^200-189
 10^300-69
