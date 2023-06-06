@@ -1,9 +1,0 @@
-ECPP:
-ecpp -n '10^500+10^499+10^460+1' -c -f /fastecpp/certs/cert-500-499-460
-
-Verify:
-export PYTHONPATH=/verify-cert/src
-/verify-cert/ecpp-verify -i /fastecpp/certs/cert-500-254-136
-
-Run list from file:
-while IFS= read -r line; do ./runandverify.sh $line; done < testnumbers.txt
