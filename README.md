@@ -27,4 +27,4 @@ export PYTHONPATH=/verify-cert/src
 ```
 
 ## Notes
-FastECPP is relatively fast. It takes a fast PC on a single core around 35 seconds to test & verify a 1000 digit number, but over 500 seconds to process a 2000 digit number. With multiple cores times are a lot better, but should be tested for better insights. Don't expect to prove any million digit PRP soon
+FastECPP is _relatively_ fast. It takes a fast PC on a single core around 35 seconds to test & verify a 1000 digit number, but over 500 seconds to process a 2000 digit number. With multiple cores times are a lot better, but should be tested for better insights. Don't expect to prove any million digit PRP soon
